@@ -1,34 +1,31 @@
-SpreeCashOnDelivery
-=====================
+# Spree Cash On Delivery
 
-This extension add new payment method: cash on delivery (COD)
+This extension adds a new payment method to Spree Commerce: Cash on delivery (COD).
 
- 
-Install
-=======
+## Install
 
-Add the following line to your application's Gemfile.
+Add the gem to your Gemfile:
 
-gem "spree_cash_on_delivery", :git => "https://github.com/sylvinho81/spree_cash_on_delivery.git", :branch => '3-0-stable'
+```rb
+gem "spree_cash_on_delivery", git: "https://github.com/zackbraksa/spree_cash_on_delivery.git", branch: 'master'
+```
 
+Run the bundle command:
+
+```rb
 bundle install
+```
 
+Run the generator:
+
+```rb
 bundle exec rails g spree_cash_on_delivery:install
+```
 
+## Usage
 
+After installation, you can configure the payment method in the Spree admin panel.
 
+## Contributing
 
-
-TODO
-====
-
-. Refactor & improve the code.
-
-. Write Rspecs, Tests tests...
-
-...
-
-
-
-
-Copyright (c) 2016 Pablo Torre, released under the New BSD License
+We welcome contributions to this extension. Please feel free to submit a pull request.
