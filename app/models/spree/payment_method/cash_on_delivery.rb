@@ -1,3 +1,5 @@
+require 'spree_core'
+
 class Spree::PaymentMethod::CashOnDelivery < Spree::PaymentMethod
 
     preference :fee, :float, default: 0.0

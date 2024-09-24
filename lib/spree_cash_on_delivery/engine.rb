@@ -1,3 +1,5 @@
+require 'spree_core'
+
 module SpreeCash0nDelivery
   class Engine < Rails::Engine
     require 'spree/core'
@@ -15,9 +17,10 @@ module SpreeCash0nDelivery
     end
 
     initializer "spree.register.payment_methods" do |app|
-      app.config.spree.payment_methods += [
-          Spree::PaymentMethod::CashOnDelivery
-      ]
+      app.config.after_initialize do
+        require 'spree_core'
+        app.config.spree.payment_methods << Spree::PaymentMethod::CashOnDelivery
+      end
     end
 
     config.to_prepare &method(:activate).to_proc
